@@ -6,6 +6,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Informe um número entre 1 e 10: ");
+        if (!scanner.hasNextInt()) {
+            System.out.println("Entrada inválida. Informe um número inteiro.");
+            scanner.close();
+            return;
+        }
         int numero = scanner.nextInt();
 
         if (numero % 2 == 0) {
